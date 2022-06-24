@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto,25rem)) 1fr ;
+}
+
+header {
+    background-image: url("images/shop_header_back.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    grid-column: 1 / -1;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
+    padding: 1rem;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    padding: 1rem 2rem;
+}
+
+.menu ul li a:hover {
+    color: orange;
+    transition: 0.5s;
+}
+
+.banner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white ;
+} 
+
+.banner h1 {
+    font-size: 72px;
+}
+
+.banner p {
+    font-size: 22px;
+    text-align: center;
+    max-width: 40%;
+    padding: 50px 0; 
+}
+
+.button {
+    background: #be7c00;
+    padding: 15px 50px;
+    font-weight: 600;
+}
+
+.button:hover {
+    background: #865700;
+}
+
+.contentInfo {
+    grid-column: 2 / -2;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 150px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.contentInfo p {
+    text-align: center;
+    padding: 20px;
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    gap: 40px;
+    grid-column: 2 / -2;
+    margin-bottom: 100px;
+    grid-row-gap: 100px;
+    grid-column-gap: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item p {
+    text-align: center;
+    margin: 25px;
+}
+
+.addButton {
+    background: black;
+    border-radius: 10px;
+    padding: 10px 50px;
+    text-align: center;
+    margin: 10px 40px;
+}
+
+footer {
+    grid-column: 1 / -1;
+    height: 30vh;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social {
+    display: flex;
+    width: 10vw;
+    justify-content: space-around;
+    padding: 20px;
+}
